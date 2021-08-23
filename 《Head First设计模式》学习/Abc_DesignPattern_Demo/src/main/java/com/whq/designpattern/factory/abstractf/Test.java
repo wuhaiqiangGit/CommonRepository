@@ -9,11 +9,11 @@ import com.whq.designpattern.factory.Sender;
  */
 public class Test {
     public static void main(String[] args) {
-        MailSenderFactory mailSenderFactory = new MailSenderFactory();
+        Provider mailSenderFactory = new MailSenderFactory();
         Sender mailSender = mailSenderFactory.produce();
         mailSender.send();
 
-        SmsSenderFactory smsSenderFactory = new SmsSenderFactory();
+        Provider smsSenderFactory = new SmsSenderFactory();
         Sender smsSender = smsSenderFactory.produce();
         smsSender.send();
     }
